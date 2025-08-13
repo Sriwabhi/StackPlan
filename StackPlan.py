@@ -24,7 +24,7 @@ def upload_svg():
     except Exception as e:
         return jsonify({'error': f'Could not save SVG file: {str(e)}'}), 500
 
-    file_url = f"https://localhost:{port}/upload/{filename}"
+    file_url = f"https://stack-plan-h3l5.vercel.app/upload/{filename}"
     return jsonify({'message': 'SVG uploaded', 'url': file_url})
 
 @app.route('/uploads/<path:filename>')
