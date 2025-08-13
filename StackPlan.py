@@ -5,7 +5,7 @@ import time
 app = Flask(__name__)
 port = 3000
 
-UPLOAD_FOLDER = "/tmp/uploads"
+UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 @app.route('/upload-svg', methods=['POST'])
